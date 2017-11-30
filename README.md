@@ -1,8 +1,5 @@
-# Yooda::Client
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yooda/client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+# A Ruby wrapper for the Yooda API
+A simple and lightweight ruby module for working with Yooda via the Yooda API. Learn about the Yooda API at https://api.yooda.com/doc.
 
 ## Installation
 
@@ -22,22 +19,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+client = Yooda::Client.new(apikey: "ok")
 
-## Development
+client.credits
+client.histories
+client.histories(request_date: Date.today.strftime("%Y-%m-%d"))
+client.histories(return_max: 2, return_initial_position: 2)
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+client.domain_informations("www.la-revanche-des-sites.fr")
+client.domain_market_kpi(1484887)
+client.keywords_market_by_domain(1484887, return_max: 2, return_initial_position: 2)
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+client.keyword_informations("SEO")
+client.keyword_market_kpi(124)
+client.keywords_market_by_keyword(124, return_max: 2, return_initial_position: 2)
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yooda-client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/larevanchedessites/yooda-api-ruby-client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+
+### History
+
+View the [changelog](https://github.com/larevanchedessites/yooda-api-ruby-client/blob/master/CHANGELOG.md). This gem follows [Semantic Versioning](http://semver.org/).
 
 ## License
-
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+See [LICENSE](https://github.com/larevanchedessites/yooda-api-ruby-client/blob/master/LICENSE.txt) for details.
 
 ## Code of Conduct
 
-Everyone interacting in the Yooda::Client project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/yooda-client/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/yooda-client/blob/master/CODE_OF_CONDUCT.md).
