@@ -7,7 +7,7 @@ module Yooda
       response = connection.get do |req|
         req.url "insight/keywords/market/by/keywords/#{kw_id}", options
       end
-      return_error_or_body(response, response.body.content)
+      return_error_or_body(response)
     end
 
     # GET /insight/keywords/{keyword}
@@ -16,7 +16,7 @@ module Yooda
       response = connection.get do |req|
         req.url "insight/keywords/#{keyword}", options
       end
-      return_error_or_body(response, response.body.content)
+      return_error_or_body(response)
     end
 
     # GET /insight/keywords/{kw_id}/market/kpi
@@ -25,7 +25,7 @@ module Yooda
       response = connection.get do |req|
         req.url "insight/keywords/#{kw_id}/market/kpi", options
       end
-      return_error_or_body(response, response.body.content)
+      return_error_or_body(response)
     end
 
   end

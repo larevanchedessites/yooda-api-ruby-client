@@ -31,21 +31,13 @@ RSpec.describe Yooda do
   context "When returning a successful response" do
     it "return the response body as a Hash." do
       # TODO
-      # response = Faraday::Response.new(:body => fixture_file('test.json', :parse => true))
-      # client   = Yooda::Client.new
-      # subject  = client.return_error_or_body(response, response.body)
-      # expect(subject).to eql(response.body)
     end
   end
 
   context "When returning a unsucessful response (error)" do
     it "raise Yooda::Error." do
-      # TODO
-      # response = Faraday::Response.new(:body => fixture_file('error.json', :parse => true))
-      # client   = Yooda::Client.new
-      # assert_raises(Yooda::APIError) do
-      #   client.return_error_or_body(response, response.body)
-      # end
+      client = Yooda::Client.new(apikey: "yolo")
+      expect { raise client.credits }.to raise_error(Yooda::APIError)
     end
   end
 

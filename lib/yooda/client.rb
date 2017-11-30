@@ -33,9 +33,9 @@ module Yooda
       params = {}
       params[:apikey] = @apikey if @apikey
       @connection ||= Faraday::Connection.new(:url => api_url, :params => params, :headers => default_headers) do |builder|
-        @connection_middleware.each do |middleware|
-          builder.use *middleware
-        end
+        # @connection_middleware.each do |middleware|
+        #   builder.use *middleware
+        # end
         builder.adapter Faraday.default_adapter
       end
     end
@@ -44,11 +44,11 @@ module Yooda
       "https://api.yooda.com"
     end
 
-    def return_error_or_body(response, response_body)
+    def return_error_or_body(response)
       if response.status == 200
-        response_body
+        response.body.content
       else
-        raise Yooda::APIError.new(response.body['meta'], response.body['response'])
+        raise Yooda::APIError.new(response.status, response.reason_phrase, response.body)
       end
     end
 

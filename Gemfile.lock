@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yooda-client (0.1.1)
+    yooda-client (0.1.2)
       faraday (~> 0.13)
       faraday_middleware
       hashie (~> 3.5)
