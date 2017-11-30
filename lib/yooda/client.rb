@@ -1,3 +1,6 @@
+require 'faraday'
+require 'faraday_middleware'
+
 module Yooda
 
   class Client
