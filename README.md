@@ -1,6 +1,8 @@
 # A Ruby wrapper for the Yooda API
 A simple and lightweight ruby module for working with Yooda via the Yooda API. Learn about the Yooda API at https://api.yooda.com/doc.
 
+[La revanche des sites](http://www.la-revanche-des-sites.fr) ❤️ [Yooda](https://www.yooda.com), so if you have problems using the gem or would like to see support for new endpoints, please open an issue. We'll get it resolved as quick as we can.
+
 ## Installation
 
 Add this line to your application's Gemfile:
