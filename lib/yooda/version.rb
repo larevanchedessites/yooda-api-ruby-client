@@ -3,7 +3,7 @@ module Yooda
   class Version
     MAJOR = 0 unless defined? Yooda::Version::MAJOR
     MINOR = 1 unless defined? Yooda::Version::MINOR
-    PATCH = 2 unless defined? Yooda::Version::PATCH
+    PATCH = 3 unless defined? Yooda::Version::PATCH
     PRE = nil unless defined? Yooda::Version::PRE
 
     class << self
