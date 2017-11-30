@@ -41,7 +41,7 @@ client.keywords_market_by_keyword(124, return_max: 2, return_initial_position: 2
 Bug reports and pull requests are welcome on GitHub at https://github.com/larevanchedessites/yooda-api-ruby-client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
-### History
+## History
 
 View the [changelog](https://github.com/larevanchedessites/yooda-api-ruby-client/blob/master/CHANGELOG.md). This gem follows [Semantic Versioning](http://semver.org/).
 
