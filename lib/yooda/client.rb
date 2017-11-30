@@ -1,6 +1,11 @@
 require 'faraday'
 require 'faraday_middleware'
 
+require_relative 'api_error'
+require_relative 'domains'
+require_relative 'keywords'
+require_relative 'subscriptions'
+
 module Yooda
 
   class Client
@@ -12,9 +17,9 @@ module Yooda
       FaradayMiddleware::ParseJson
     ]
 
-    include Domains
-    include Keywords
-    include Subscriptions
+    include Yooda::Domains
+    include Yooda::Keywords
+    include Yooda::Subscriptions
 
     attr_reader :apikey
 
