@@ -25,7 +25,8 @@ module Yooda
 
     def initialize(options={})
       @apikey = options[:apikey] || Yooda.apikey
-      @connection_middleware = options[:connection_middleware] || Yooda.connection_middleware || []
+      # @connection_middleware = options[:connection_middleware] || Yooda.connection_middleware || []
+      @connection_middleware = []
       @connection_middleware += DEFAULT_CONNECTION_MIDDLEWARE
     end
 
